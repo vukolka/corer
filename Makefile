@@ -10,48 +10,26 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = mkoniev.filler
-CC = gcc
-FILES =	ft_print \
-		ft_printf \
-		need \
-		needmore \
-		numbers \
-		other \
-		otherother \
-		strings \
-		unic \
-		play \
-		alg \
-		powsqr \
-		get_next_line
-FLAGS = -Wall -Werror -Wextra -O3 -Os
-SRC = $(addprefix src/, $(addsuffix .c, $(FILES)))
-OBJ = $(addprefix obj/, $(addsuffix .o, $(FILES)))
-OBJ_LIST = $(addsuffix .o, $(FILES))
-HEADERS = -I./includes
+all:
+	@make -C corewar_main/
+	@make -C asm_corewar/
+	@cmake corewar_visualization/CMakeLists.txt
+	@make -C corewar_visualization/
+	cp corewar_main/corewar .
+	cp asm_corewar/asm .
+	cp corewar_visualization/CorewarVis .
 
-all: $(NAME)
-
-$(NAME): libft/libft.a $(OBJ)
-	@echo "\033[36mLinking...\033[0m"
-	@$(CC) -o $(NAME) $(OBJ) $(FLAGS) libft/libft.a
-	@echo "\033[32m[ ✔ ] Binary \033[1;32m$(NAME)\033[1;0m\033[32m created.\033[0m"
-libft/libft.a:
-	@make -C libft/
-obj/%.o: src/%.c
-	@$(CC) -o $@ $(FLAGS) $(HEADERS) -c $^
-	@echo "\033[34mCompilation of \033[32m$(notdir $<) \033[0m\033[34mdone. \033[0m"
 clean:
-	@rm -rf $(OBJ)
-	@make -C libft/ clean
-	@echo "\033[31m[ ✔ ] Objects files \033[91m$(OBJ_LIST) \033[0m\033[31m removed. \033[0m"
+	@make -C corewar_main/ clean
+	@make -C asm_corewar/ clean
+
 fclean:
-	@rm -rf $(OBJ)
-	@rm -f $(NAME)
-	@make -C libft/ fclean
-	@echo "\033[31m[ ✔ ] Objects files \033[91m$(OBJ_LIST) \033[0m\033[31m removed. \033[0m"
-	@echo "\033[31m[ ✔ ] Binary \033[1;31m$(NAME) \033[1;0m\033[31mremoved.\033[0m"
+	@make -C corewar_main/ fclean
+	@make -C asm_corewar/ fclean
+	@rm CorewarVis
+	@rm asm
+	@rm corewar
+
 re: fclean all
 
 .PHONY: all clean fclean re
