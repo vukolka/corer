@@ -1,0 +1,13 @@
+#ifndef COREWARVIS_OP_H
+#define COREWARVIS_OP_H
+
+#define MEM_SIZE 4096
+#define CYCLE_DELTA 50
+#define MAX_CHECKS 10
+#define NBR_LIVE 20
+#define MAP_UNITS 64
+#define CYCLE_TO_DIE 1500
+#define MAP_OFFSET_Y 60
+#define MAP_OFFSET_X 60
+
+#endif //COREWARVIS_OP_H
