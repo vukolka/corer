@@ -12,10 +12,9 @@
 
 #include <fcntl.h>
 #include <zconf.h>
+#include "../libft/includes/ft_printf.h"
 #include "op.h"
-#include "../libft/ft_printf/libftprintf/libft.h"
 #include "../libft/classes_lib/classes_lib.h"
-#include "../libft/ft_printf/ft_printf/ft_printf.h"
 #include "../libft/classes_lib/linked_list.h"
 
 void	ft_printf_last_error(char *err)

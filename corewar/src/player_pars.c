@@ -10,10 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/ft_printf/libftprintf/libft.h"
-#include "../libft/classes_lib/linked_list.h"
-#include "../libft/ft_printf/ft_printf/ft_printf.h"
-#include "../libft/classes_lib/new.h"
 #include "op.h"
 
 char			**count_players(char **str, int num, int *pl_count)

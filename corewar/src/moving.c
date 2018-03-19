@@ -10,12 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_printf.h>
 #include "op.h"
-#include "../libft/classes_lib/new.h"
-#include "../libft/classes_lib/queue.h"
-#include "../libft/classes_lib/linked_list.h"
-#include "../libft/ft_printf/libftprintf/libft.h"
 
 unsigned char	*get_args_helper(t_environment *env,
 								t_command_cache *p_cache,

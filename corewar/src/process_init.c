@@ -10,11 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_printf.h>
 #include "op.h"
-#include "../libft/ft_printf/libftprintf/libft.h"
-#include "../libft/classes_lib/queue.h"
-#include "../libft/classes_lib/linked_list.h"
 
 int		get_id(t_environment *env, int ind)
 {

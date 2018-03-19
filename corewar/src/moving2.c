@@ -10,12 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_printf.h>
 #include "op.h"
-#include "../libft/classes_lib/new.h"
-#include "../libft/classes_lib/queue.h"
-#include "../libft/classes_lib/linked_list.h"
-#include "../libft/ft_printf/libftprintf/libft.h"
 
 void			add_to_tail(t_process *new, t_process **list)
 {

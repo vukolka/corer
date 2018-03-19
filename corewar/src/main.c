@@ -10,13 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <fcntl.h>
-#include <zconf.h>
 #include "op.h"
-#include "../libft/ft_printf/libftprintf/libft.h"
-#include "../libft/classes_lib/classes_lib.h"
-#include "../libft/ft_printf/ft_printf/ft_printf.h"
-#include "../libft/classes_lib/linked_list.h"
 
 void	get_flags(t_environment *env, char **param)
 {

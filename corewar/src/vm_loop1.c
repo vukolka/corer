@@ -10,11 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_printf.h>
 #include "op.h"
-#include "../libft/classes_lib/linked_list.h"
-#include "../libft/classes_lib/queue.h"
-#include "../libft/classes_lib/new.h"
 
 void		last_hit_proc(t_environment *env, t_process *new_queue, int i)
 {

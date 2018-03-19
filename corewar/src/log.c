@@ -10,10 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-#include "../libft/classes_lib/linked_list.h"
 #include "op.h"
-#include <fcntl.h>
 
 void	log_state(t_environment *environment)
 {

@@ -10,12 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <printf.h>
-#include <libft.h>
-#include <ft_printf/ft_printf.h>
 #include "op.h"
-#include "../libft/classes_lib/linked_list.h"
-#include "../libft/classes_lib/queue.h"
 
 int				count_swipe(t_process *proc, t_environment *env)
 {

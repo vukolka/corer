@@ -10,12 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <printf.h>
-#include <libft.h>
-#include <ft_printf/ft_printf.h>
 #include "op.h"
-#include "../libft/classes_lib/linked_list.h"
-#include "../libft/classes_lib/queue.h"
 
 void			n_cpy_map(t_environment *env, unsigned char *src,
 						int start, int count)

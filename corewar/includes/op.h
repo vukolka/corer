@@ -11,6 +11,13 @@
 /* ************************************************************************** */
 
 #ifndef COREWAR_OP_H
+# include <fcntl.h>
+# include <zconf.h>
+# include "libft.h"
+# include "ft_printf.h"
+# include "../libft/classes_lib/classes_lib.h"
+# include "../libft/classes_lib/linked_list.h"
+# include "../libft/classes_lib/queue.h"
 # define COREWAR_OP_H
 # define IND_SIZE					2
 # define REG_SIZE					4
