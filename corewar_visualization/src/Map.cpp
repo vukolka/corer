@@ -159,6 +159,8 @@ bool Map::parceMap()
 	int fd = open("../map.txt", O_RDONLY);
 	unsigned char data[4096];
 	int players = playersArray.size() - 1;
+	if (playersArray.size() == 0)
+		exit(0);
 	int	j;
 	int k = 0;
 	int switcher = 1;
@@ -331,5 +333,7 @@ SDL_Color & Map::getPlayerById(int id)
 		if (i.id == id)
 			return i.playerColor;
 	}
+	auto csa = playersArray[0].playerColor;
+	return (csa);
 }
 
