@@ -31,9 +31,9 @@ FILES = log \
 		player_pars1 \
 		process_init \
 		vm_loop \
-		vm_loop1 \
+		vm_loop1
 
-FLAGS = -O3 -Os
+FLAGS = -Wall -Wextra -Werror -O3 -Os
 SRC = $(addprefix src/, $(addsuffix .c, $(FILES)))
 OBJ = $(addprefix obj/, $(addsuffix .o, $(FILES)))
 OBJ_LIST = $(addsuffix .o, $(FILES))

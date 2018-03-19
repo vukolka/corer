@@ -50,7 +50,8 @@ void			live(t_process *process, t_environment *env)
 	temp = env->players;
 	process->live_executions += 1;
 	while (temp && ((t_player *)(temp->content))->id !=
-				-convert_arg(process->command_cache->args[0], process, 0))
+				(unsigned)-convert_arg(process->command_cache->args[0],
+					process, 0))
 		temp = temp->next;
 	if (temp && ((t_player *)(temp->content))->current_lives != -1)
 	{
@@ -72,7 +73,7 @@ void			set_delay(t_process *current_proc)
 	ft_bzero(current_proc->command_cache->args[1], 4);
 	ft_bzero(current_proc->command_cache->args[2], 4);
 	if (current_proc->command_cache->codage)
-		ft_memdel(&(current_proc->command_cache->codage));
+		ft_memdel((void **)&(current_proc->command_cache->codage));
 	if (current_proc->command_cache->op_code <= 16
 		&& current_proc->command_cache->op_code > 0)
 	{

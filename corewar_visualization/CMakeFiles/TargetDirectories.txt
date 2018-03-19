@@ -1,0 +1,3 @@
+/Users/mkoniev/Desktop/corewar_final/corewar_visualization/CMakeFiles/rebuild_cache.dir
+/Users/mkoniev/Desktop/corewar_final/corewar_visualization/CMakeFiles/edit_cache.dir
+/Users/mkoniev/Desktop/corewar_final/corewar_visualization/CMakeFiles/CorewarVis.dir

@@ -18,6 +18,7 @@
 # include "../libft/classes_lib/classes_lib.h"
 # include "../libft/classes_lib/linked_list.h"
 # include "../libft/classes_lib/queue.h"
+# include "../libft/classes_lib/new.h"
 # define COREWAR_OP_H
 # define IND_SIZE					2
 # define REG_SIZE					4
@@ -206,6 +207,9 @@ void					delete_proc(t_process **proc);
 void					put_player_ints(t_player *player, int i);
 int						add_to_map(int fd, t_environment *env,
 									int ind, int pl_count);
+int						get_player(int fd, t_environment *env,
+							int i, int pl_count);
+void					get_name_and_desc(int fd, t_player *player);
 static t_op				g_op_tab[17] =
 {
 	{"live", 1, {T_DIR}, 1, 10, 0, 0, 4, live, valid_live, 5},
@@ -230,6 +234,6 @@ static t_op				g_op_tab[17] =
 		50, 1, 1, 2, ft_lldi, ldi_valid, 7},
 	{"lfork", 1, {T_DIR}, 15, 1000, 0, 1, 2, ft_lfork, fork_valid, 3},
 	{"aff", 1, {T_REG}, 16, 2, 1, 0, 4, ft_aff, valid_aff, 3},
-	{0, 0, {0}, 0, 0, 0, 0, 0}
+	{0, 0, {0}, 0, 0, 0, 0, 0, 0, 0, 0}
 };
 #endif

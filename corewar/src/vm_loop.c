@@ -22,6 +22,7 @@ int			set_zero(t_environment *env)
 		((t_player *)t->content)->current_lives = 0;
 		t = t->next;
 	}
+	return (1);
 }
 
 void		get_winner(t_environment *env)

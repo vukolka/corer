@@ -94,10 +94,12 @@ void	print_operation(t_process *proc, t_environment *env)
 				g_op_tab[proc->command_cache->op_code - 1].name);
 	print_op_inside(proc, env);
 	if (proc->command_cache->op_code == 9)
+	{
 		if (proc->carry == 1)
 			ft_printf_fd(" OK", env->debug_fd);
 		else
 			ft_printf_fd(" FAIL", env->debug_fd);
+	}
 	if (proc->command_cache->op_code == 12 ||
 			proc->command_cache->op_code == 15)
 		ft_printf_fd(" (%hd)", env->debug_fd,

@@ -47,6 +47,7 @@ void	print_movement(t_process *proc,
 
 void	debug_log(t_process *proc, t_environment *env, int success)
 {
+	success = 1;
 	if (!env->debug_flag)
 		return ;
 	if (proc->success)

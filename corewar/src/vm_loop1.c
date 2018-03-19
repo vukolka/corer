@@ -40,7 +40,7 @@ void		kill_proc(t_environment *env)
 	t_process	*proc;
 
 	i = 0;
-	if (env->cycles >= env->nextkill)
+	if ((int)env->cycles >= env->nextkill)
 	{
 		new_queue = NULL;
 		set_zero(env);
@@ -74,7 +74,7 @@ void		vm_loop(t_environment *environment)
 		kill_proc(environment);
 		if (environment->vis_flag)
 			log_state(environment);
-		if (environment->cycles == environment->dump)
+		if ((int)environment->cycles == environment->dump)
 			dump_memory(environment);
 	}
 }

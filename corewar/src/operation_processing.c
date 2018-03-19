@@ -18,6 +18,7 @@ int				count_swipe(t_process *proc, t_environment *env)
 	int i;
 
 	i = 0;
+	(void)env;
 	swipe = (g_op_tab[proc->command_cache->op_code - 1].codage) ? 2 : 1;
 	while (i < g_op_tab[proc->command_cache->op_code - 1].args_num)
 	{

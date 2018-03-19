@@ -54,6 +54,7 @@ int				check_val_regs(t_process *process, t_environment *env)
 	char	tmp;
 
 	i = 0;
+	(void)env;
 	while (i < 3)
 	{
 		tmp = *process->command_cache->args[i];

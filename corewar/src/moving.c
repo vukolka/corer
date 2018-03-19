@@ -43,7 +43,7 @@ void			get_args(t_command_cache *p_cache,
 			k += g_op_tab[p_cache->op_code - 1].lable_size;
 		else if (p_cache->codage[i - 1] == 'R')
 			k++;
-		while (a < k)
+		while (a < (int)k)
 		{
 			p_cache->args[i - 1][a] = *(counter + a);
 			a++;

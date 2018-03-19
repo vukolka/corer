@@ -39,12 +39,12 @@ char			**count_players(char **str, int num, int *pl_count)
 	return (player_list);
 }
 
-unsigned char	*free_join(unsigned char *old, char *new)
+unsigned char	*free_join(unsigned char *old, unsigned char *new)
 {
 	unsigned char *tmp;
 
 	tmp = old;
-	old = (unsigned char *)ft_strjoin(old, new);
+	old = (unsigned char *)ft_strjoin((const char*)old, (const char*)new);
 	free(tmp);
 	return (old);
 }
