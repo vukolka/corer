@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   op.h                                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mkoniev <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/03/19 18:18:37 by mkoniev           #+#    #+#             */
+/*   Updated: 2018/03/19 18:18:38 by mkoniev          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef COREWAR_OP_H
 # define COREWAR_OP_H
@@ -71,7 +82,7 @@ typedef struct			s_environment
 	int					debug_flag;
 	int					vis_flag;
 	int					dump;
-	int 				hide_lives;
+	int					hide_lives;
 }						t_environment;
 typedef struct			s_op
 {
@@ -178,6 +189,16 @@ void					vm_loop(t_environment *environment);
 void					make_turn(t_environment *environment);
 void					process_operation(t_process *current_proc,
 							t_environment *env);
+void					print_operation(t_process *proc, t_environment *env);
+void					while_in_logstate(t_environment *environment);
+int						valid_num(char *num);
+void					player_num(char **flags,
+								int pl_count, t_environment *env);
+int						set_zero(t_environment *env);
+void					delete_proc(t_process **proc);
+void					put_player_ints(t_player *player, int i);
+int						add_to_map(int fd, t_environment *env,
+									int ind, int pl_count);
 static t_op				g_op_tab[17] =
 {
 	{"live", 1, {T_DIR}, 1, 10, 0, 0, 4, live, valid_live, 5},
