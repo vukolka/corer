@@ -108,7 +108,7 @@ void	Map::transormToAscii(char *line, unsigned char sym)
 
 int Map::initialParsing(SDL_Renderer *inRenderer, TTF_Font *inFont)
 {
-	inputFile = new ifstream("../log.txt");
+	inputFile = new ifstream("log.txt");
 	string	line;
 	mapRenderer = inRenderer;
 	mapFont = inFont;
@@ -156,7 +156,7 @@ void Map::renderProcesses(SDL_Renderer *renderer)
 
 bool Map::parceMap()
 {
-	int fd = open("../map.txt", O_RDONLY);
+	int fd = open("map.txt", O_RDONLY);
 	unsigned char data[4096];
 	int players = playersArray.size() - 1;
 	if (playersArray.size() == 0)
@@ -306,7 +306,7 @@ void Map::processCycle(int &cycles)
 	getline(cin, line);
 	int cycle = stoi(line);
 	inputFile->close();
-	inputFile->open("../log.txt");
+	inputFile->open("log.txt");
 	while (getline(*inputFile, line))
 	{
 		if (line == "<cycle>")
@@ -322,7 +322,7 @@ void Map::processCycle(int &cycles)
 	lastMove = nullptr;
 	inputFile->close();
 	delete(inputFile);
-	inputFile = new ifstream("../log.txt");
+	inputFile = new ifstream("log.txt");
 	parceMap();
 }
 
@@ -333,7 +333,6 @@ SDL_Color & Map::getPlayerById(int id)
 		if (i.id == id)
 			return i.playerColor;
 	}
-	auto csa = playersArray[0].playerColor;
-	return (csa);
+	return playersArray[0].playerColor;
 }
 
